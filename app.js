@@ -1,4 +1,6 @@
 import express from "express"
+import database from "./confiq/database.js"
+import api from "./route/api.js"
 
 const app = express()
 
@@ -8,6 +10,9 @@ app.get("/", (req, res) => {
     })
 })
 
+app.use('/api', api)
+
 app.listen(3000, () => {
+    database()
     console.log(`App berjalan di http://localhost:3000`);
 })
