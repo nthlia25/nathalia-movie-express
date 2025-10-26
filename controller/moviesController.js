@@ -16,8 +16,8 @@ export const listMovie = async (req, res) => {
     }
 }
 
-export const createNewMovie = async (req, res) => {
-    try{
+export const createNewMovie = async (req, res)=>{
+    try {
         const request = req.body
 
         const response = await movieModel.create({
@@ -27,13 +27,15 @@ export const createNewMovie = async (req, res) => {
         })
 
         res.status(201).json({
-            movies : "Movie berhasil ditambahkan",
-            data : response
+            movies: "Movie berhasil dibuat",
+            data: response
         })
-    } catch (error) {
+
+}catch (error) {
         res.status(500).json({
-            movies : error,
-            data : null
+            movies: error.message,
+            data: null
+
         })
     }
 }
