@@ -11,7 +11,7 @@ export const listMovie = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             movies : error,
-            data : data
+            data : null
         })
     }
 }
@@ -31,11 +31,10 @@ export const createNewMovie = async (req, res)=>{
             data: response
         })
 
-}catch (error) {
+    } catch (error) {
         res.status(500).json({
             movies: error.message,
             data: null
-
         })
     }
 }
@@ -53,7 +52,9 @@ export const updateMovie = async (req, res) => {
         }
 
         const response = await movieModel.findByIdAndUpdate(id, {
-            movies : request.movies
+            judul : request.judul,
+            tahunRilis : request.tahunRilis,
+            sutradara : request.sutradara
         })
 
         if(!response){

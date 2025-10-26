@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "3714e69b-691c-458f-92dc-bb74b67eabcf",
+		"name": "movie-nathalia-SI52",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49362346",
+		"_collection_link": "https://nathaliamargaretha2506-8014388.postman.co/workspace/Nathalia-Margaretha's-Workspace~c7804b1f-7ba6-45d7-8b73-f989839472b7/collection/49362346-3714e69b-691c-458f-92dc-bb74b67eabcf?action=share&source=collection_link&creator=49362346"
+	},
+	"item": [
+		{
+			"name": "List Movie",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"K-pop Demon Hunters\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Maggie Kang, Chris Appelhans\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"K-pop Demon Hunters\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Maggie Kang, Chris Appelhans\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movies",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"K-pop Demon Hunters\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Maggie Kang, Chris Appelhans\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/68fdf86bb1ded0ca6823444f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"68fdf86bb1ded0ca6823444f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\" : \"K-pop Demon Hunters\",\r\n    \"tahunRilis\" : \"2025\",\r\n    \"sutradara\" : \"Maggie Kang, Chris Appelhans\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/movies/68fdf86bb1ded0ca6823444f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"movies",
+						"68fdf86bb1ded0ca6823444f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

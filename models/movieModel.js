@@ -2,18 +2,18 @@ import mongoose from "mongoose";
 
 const MovieSchema = new mongoose.Schema(
     {
-        judul: {
+        judul : {
             type: String,
             unique: true,
             required: true,
             trim: true
         },
-        tahunRilis: {
-                type: String,
-                required: true,
-                trim: true
+        tahunRilis : {
+            type: String,
+            required: true,
+            trim: true
         },
-        sutradara: {
+        sutradara : {
             type: String,
             required: true,
             trim: true
