@@ -17,9 +17,3 @@ app.listen(3000, () => {
     database()
     console.log(`App berjalan di http://localhost:3000`);
 })
-
-// npm init -y
-// npm install express
-// npm install -D nodemon
-// npm install mongoose
-// npm run dev
