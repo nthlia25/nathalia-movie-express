@@ -1,8 +1,12 @@
 import express from "express"
 import database from "./confiq/database.js"
 import api from "./route/api.js"
+import cors from "cors"
 
 const app = express()
+
+app.use(cors())
+
 app.use(express.json())
 
 app.get("/", (req, res) => {
