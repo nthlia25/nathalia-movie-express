@@ -16,8 +16,8 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "Accept",
-						"value": "application/json",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkyODA0YjI4N2YyYjI4YmM5NzQwZjdmIiwidXNlcm5hbWUiOiJuYXRoYWxpYTEiLCJpYXQiOjE3NjQyMzAzMjksImV4cCI6MTc2NDIzMTIyOX0.hLdxWVtQLZudpgb_BrUqzGT-5rn0VM0HOLySRo6Cw64",
 						"type": "text"
 					}
 				],
@@ -122,8 +122,8 @@
 				"method": "DELETE",
 				"header": [
 					{
-						"key": "Accept",
-						"value": "application/json",
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkyODA0YjI4N2YyYjI4YmM5NzQwZjdmIiwidXNlcm5hbWUiOiJuYXRoYWxpYTEiLCJpYXQiOjE3NjQyMzAzMjksImV4cCI6MTc2NDIzMTIyOX0.hLdxWVtQLZudpgb_BrUqzGT-5rn0VM0HOLySRo6Cw64",
 						"type": "text"
 					}
 				],
@@ -137,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/movies/68fdf86bb1ded0ca6823444f",
+					"raw": "http://localhost:3000/api/movies/692805f2e32f78ccaff48c4f",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -146,7 +146,77 @@
 					"path": [
 						"api",
 						"movies",
-						"68fdf86bb1ded0ca6823444f"
+						"692805f2e32f78ccaff48c4f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"nathalia\",\r\n    \"email\" : \"nathalia@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"nathalia@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signin"
 					]
 				}
 			},

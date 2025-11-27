@@ -1,5 +1,5 @@
 import UserModel from "../models/userModel.js";
-import { hashedPassword, hashedPassword, verifyPassword } from "../utils/hashUtil.js";
+import { hashedPassword, verifyPassword } from "../utils/hashUtil.js";
 import { getJwtToken } from "../utils/jwtUtil.js";
 
 export const signIn = async (req, res) => {
@@ -13,7 +13,7 @@ export const signIn = async (req, res) => {
             });
         }
 
-        const user = await UserModal.findOne({ email });
+        const user = await UserModel.findOne({ email });
         if (!user) {
             return res.status(400).send({
                 error: 'Email atau password salah',

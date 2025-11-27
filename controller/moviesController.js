@@ -30,11 +30,11 @@ export const createNewMovie = async (req, res)=>{
             });
         }
 
-        const movie = await movieModel.created({judul, tahunRilis, sutradara, createdBy: req.user?.user.id});
+        const movie = await movieModel.create({judul, tahunRilis, sutradara, createdBy: req.user?.user_id});
 
         res.status(201).json({
             movies: "Movie berhasil dibuat",
-            data: response
+            data: movie
         })
 
     } catch (error) {
